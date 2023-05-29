@@ -1,0 +1,18 @@
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-datatypes ((IntState 0)) (((Mk1 (val1 Int)) (Mk2 (val2 Int)))))
+ (declare-fun c_main_~i~6 () Int)
+(declare-fun c_main_~j~6 () Int)
+(declare-fun c_main_~k~6 () Int)
+(assert
+ (let (($x171 (<= 2 c_main_~i~6)))
+ (let (($x45 (<= 3 c_main_~i~6)))
+ (let (($x29 (exists ((v_nnf_74_st IntState) (val!65 Int) )(let (($x114 (and (<= c_main_~k~6 (+ (val2 v_nnf_74_st) 3)) (<= (* 2 (val2 v_nnf_74_st)) c_main_~j~6) (<= 4 (val2 v_nnf_74_st)))))
+ (let (($x52 (not (= v_nnf_74_st (Mk1 val!65)))))
+ (and $x52 $x114))))
+ ))
+ (let (($x118 (<= 0 c_main_~i~6)))
+ (let (($x51 (<= 1 c_main_~i~6)))
+ (let (($x156 (and (<= c_main_~k~6 c_main_~i~6) (<= (* 2 c_main_~i~6) c_main_~j~6) (<= 4 c_main_~i~6))))
+ (and $x156 (not (and $x51 $x118 $x29 $x45 $x171))))))))))
+(check-sat)

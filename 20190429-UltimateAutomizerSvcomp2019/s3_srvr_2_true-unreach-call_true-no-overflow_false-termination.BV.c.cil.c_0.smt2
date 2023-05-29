@@ -1,0 +1,17 @@
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-datatypes ((IntState 0)) (((Mk1 (val1 Int)) (Mk2 (val2 Int)))))
+ (declare-fun c_ssl3_accept_~s__state~0 () Int)
+(assert
+ (let (($x261 (exists ((ssl3_accept_~ag_X~0_st IntState) (val!127 Int) )(exists ((ssl3_accept_~ag_Y~0_st IntState) (val!128 Int) )(let ((?x106 (val2 ssl3_accept_~ag_Y~0_st)))
+ (let ((?x202 (* 2 ?x106)))
+ (let ((?x204 (val2 ssl3_accept_~ag_X~0_st)))
+ (let ((?x229 (* 2 ?x204)))
+ (let ((?x201 (+ ?x229 ?x202)))
+ (let (($x112 (not (= ssl3_accept_~ag_Y~0_st (Mk1 val!128)))))
+ (let (($x121 (not (= ssl3_accept_~ag_X~0_st (Mk1 val!127)))))
+ (and $x121 $x112 (and (<= ?x201 8496) (<= c_ssl3_accept_~s__state~0 ?x201)))))))))))
+ )
+ ))
+ (not $x261)))
+(check-sat)

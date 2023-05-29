@@ -1,0 +1,17 @@
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-datatypes ((IntState 0)) (((Mk1 (val1 Int)) (Mk2 (val2 Int)))))
+ (assert
+ (let (($x104 (exists ((?X_st IntState) (val!29 Int) )(exists ((?Y_st IntState) (val!30 Int) )(exists ((?Z1_st IntState) (val!31 Int) )(exists ((?Z2_st IntState) (val!32 Int) )(let (($x46 (not (= (val2 ?Z1_st) (val2 ?Z2_st)))))
+ (let (($x9 (and (= (+ (val2 ?X_st) (val2 ?Y_st)) (val2 ?Z1_st)) (= (+ (val2 ?X_st) (val2 ?Y_st)) (val2 ?Z2_st)) $x46)))
+ (let (($x31 (not (= ?Z2_st (Mk1 val!32)))))
+ (let (($x12 (not (= ?Z1_st (Mk1 val!31)))))
+ (let (($x52 (not (= ?Y_st (Mk1 val!30)))))
+ (let (($x34 (not (= ?X_st (Mk1 val!29)))))
+ (and $x34 $x52 $x12 $x31 $x9))))))))
+ )
+ )
+ )
+ ))
+ (not $x104)))
+(check-sat)

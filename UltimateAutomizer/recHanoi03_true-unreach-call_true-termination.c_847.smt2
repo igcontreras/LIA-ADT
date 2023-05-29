@@ -1,0 +1,18 @@
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-datatypes ((IntState 0)) (((Mk1 (val1 Int)) (Mk2 (val2 Int)))))
+ (declare-fun |c_hanoi_#res| () Int)
+(declare-fun |c_hanoi_#in~n| () Int)
+(declare-fun c_hanoi_~n () Int)
+(assert
+ (let (($x111 (exists ((|v_hanoi_#t~ret0_15_st| IntState) (val!104 Int) )(let (($x126 (<= |c_hanoi_#in~n| 2)))
+ (let (($x31 (and (<= 1 (val2 |v_hanoi_#t~ret0_15_st|)) $x126 (<= (+ (* 2 (val2 |v_hanoi_#t~ret0_15_st|)) 1) |c_hanoi_#res|))))
+ (let (($x52 (not (= |v_hanoi_#t~ret0_15_st| (Mk1 val!104)))))
+ (and $x52 $x31)))))
+ ))
+ (let (($x57 (exists ((|v_hanoi_#t~ret0_15| Int) )(let (($x126 (<= |c_hanoi_#in~n| 2)))
+ (and (<= 1 |v_hanoi_#t~ret0_15|) $x126 (<= (+ (* 2 |v_hanoi_#t~ret0_15|) 1) |c_hanoi_#res|))))
+ ))
+ (let (($x110 (<= |c_hanoi_#in~n| c_hanoi_~n)))
+ (and (and $x110 $x57) (not $x111))))))
+(check-sat)

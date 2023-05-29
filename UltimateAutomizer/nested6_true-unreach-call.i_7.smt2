@@ -1,0 +1,16 @@
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-datatypes ((IntState 0)) (((Mk1 (val1 Int)) (Mk2 (val2 Int)))))
+ (declare-fun c_main_~n~6 () Int)
+(declare-fun c_main_~j~6 () Int)
+(declare-fun c_main_~i~6 () Int)
+(assert
+ (let (($x65 (exists ((main_~i~6_st IntState) (val!7 Int) )(let ((?x56 (val2 main_~i~6_st)))
+ (let (($x5 (<= ?x56 0)))
+ (let (($x52 (not (= main_~i~6_st (Mk1 val!7)))))
+ (and $x52 (and (<= c_main_~j~6 (* 2 ?x56)) (< ?x56 c_main_~n~6) $x5))))))
+ ))
+ (let (($x94 (<= c_main_~i~6 0)))
+ (let (($x93 (and (<= c_main_~j~6 (* 2 c_main_~i~6)) (< c_main_~i~6 c_main_~n~6) $x94)))
+ (and $x93 (not (and $x94 $x65)))))))
+(check-sat)
